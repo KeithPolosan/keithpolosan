@@ -1,0 +1,206 @@
+*{
+
+    margin: 0;
+    padding: 0;
+   
+}
+
+.logo{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.logo img{
+    width: 150px;
+}
+
+.logo ul{
+
+    display: flex;
+    list-style-type: none;
+    align-items: center ;
+
+}
+.logo ul li{
+
+    padding: 10px;
+    
+}
+.logo ul li a{
+
+    text-decoration: none;
+    color: black;
+}
+.container {
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.container .box{
+
+    width: 30vw;
+    height: 40vh;
+     background-color: black;
+    margin: 10px;
+}
+.banner{
+ background-image: url(img/final.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+    width: 100%;
+    height: 60vh;
+}
+
+.box img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.form-container {
+
+     background:linear-gradient(rgb(255, 250, 250));
+    padding: 10px;
+    height: 110vh;
+   
+}
+
+.form-container .form-group{
+
+    
+  
+   display: flex;
+    margin: 10px;
+    justify-content:space-between ;
+}
+
+.form-container .form-group label{
+
+    font-weight: 550;
+    color: #000000;
+    margin-top: 15px;
+    
+}
+.form-container .form-group textarea{
+   
+    resize: none;
+    height: 20vh;
+      
+    
+}
+.form-container .form-group {
+
+    select{
+
+          color: rgb(22, 21, 21);
+           
+
+    }
+
+   
+}
+.form-container .form-group input,textarea, select,textarea{
+
+   
+    outline-color: rgb(79, 81, 84);
+    color: rgb(20, 22, 22);
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgb(223, 215, 215);
+    border-radius: 5px;
+    
+}
+.form-container .button-container button{
+
+    
+   float: right;
+   border-radius: 5px;
+     background-color: rgb(255, 249, 249);
+    padding: 10px;
+    width: 100px;
+    border: none;
+    font-weight: 500;
+    color: rgb(255, 251, 251);
+    background-color: brown;
+     transition: .3s;
+}
+footer{
+
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+@media only screen and (max-width:600px){
+
+    .logo{
+
+        display: block;
+        justify-items: center;
+    }
+
+    .logo ul{ 
+
+        display: block;
+        justify-items: center;
+        width: 100%;
+    }
+     .logo ul li{
+
+        border-bottom: 1px solid;
+        width: 100%;
+       text-align: center;
+     }
+
+     .container {
+
+        display: block;
+        justify-items: center;
+     }
+      .container .box{
+
+        width: 100%;
+      }
+
+            
+   .form-container {
+
+    height: 150vh;
+   }
+    .form-container .form-group {
+ 
+        display: block;
+       
+    }
+
+    .form-container .form-group input,select,textarea{
+
+        width: 100%;
+
+    }
+      .form-container .button-container button{
+
+        width: 100%;
+        justify-self: center;
+      }
+
+   
+       
+      .container-about h1{
+
+    font-size: 1.5rem;
+}
+
+
+        }
+        button{
+            background-color: #000000;
+        }

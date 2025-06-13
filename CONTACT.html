@@ -1,150 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-     <link rel="shoctcut icon" href="img/FMovies Logo.jpg">
-    <title>CONTACT</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/FMovies Logo.jpg" />
+  <title>Contact</title>
 </head>
 <body>
+  <div class="logo">
+    <img src="img/FMovies Logo.jpg" alt="FMovies Logo" />
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="ABOUT.html">ABOUT US</a></li>
+      <li><a href="CONTACT.html">CONTACT</a></li>
+    </ul>
+  </div>
 
-       <div class="logo">
-       
-      <img src="img/FMovies Logo.jpg" alt="">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-              <li><a href="ABOUT.html">ABOUT US</a></li>
-                <li><a href="CONTACT.html">CONTACT</a></li>
-        </ul>
-    </div>
+  <div class="banner"></div>
 
-    <div class="banner">
+  <form id="contactForm">
+    <div class="form-container">
+      <div class="form-group">
+        <label for="fname">Firstname</label>
+        <input type="text" id="fname" placeholder="Your Name" required />
+      </div>
 
-  
+      <div class="form-group">
+        <label for="lname">Lastname</label>
+        <input type="text" id="lname" placeholder="Your Last Name" required />
+      </div>
 
-</div>
-      <form action="">
+      <div class="form-group">
+        <label for="telephone">Telephone No.</label>
+        <input type="tel" id="telephone" placeholder="Valid Format" required />
+      </div>
 
-         
-            <div class="form-container">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="sample@gmail.com" required />
+      </div>
 
-       <div class="form-group">
+      <div class="form-group">
+        <label for="org">Organization</label>
+        <input type="text" id="org" required />
+      </div>
 
-                      <label for="fname">Firstname</label>           
-                      <input type="text" id="fname" placeholder="Your Name" required>
+      <div class="form-group">
+        <label for="province">Province</label>
+        <select id="province" required>
+          <option value="" disabled selected>Select your province</option>
+          <option value="davao del norte">Davao del Norte</option>
+        </select>
+      </div>
 
-                </div>
-               
-               <div class="form-group">
+      <div class="form-group">
+        <label for="city">City/Town</label>
+        <select id="city" required>
+          <option value="" disabled selected>Select your Municipality or city</option>
+          <option value="tagum city">Tagum City</option>
+        </select>
+      </div>
 
-                     <label for="lname">Lastname</label>
-                     <input type="text" id="lname" placeholder="Your Last Name" required>
-                 
-                </div>
+      <div class="form-group">
+        <label for="Barangay">Barangay</label>
+        <select id="Barangay" required>
+          <option value="" disabled selected>Select your Barangay</option>
+          <option value="mankilam">Mankilam</option>
+        </select>
+      </div>
 
-              <div class="form-group">
+      <div class="form-group">
+        <label for="Street">Street</label>
+        <input type="text" id="Street" required />
+      </div>
 
-                    <label for="telephone">Telephone No.</label>
-                    <input type="tel" id="telephone" placeholder="Valid Format" required>
-                  
-             </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write something....." required></textarea>
+      </div>
 
-            <div class="form-group">
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault(); 
 
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="sample@gmail.com" required>
-                    
-                  
-                </div>
-             <div class="form-group">
+      let fname = document.getElementById("fname").value;
+     let lname = document.getElementById("lname").value;
+      let telephone = document.getElementById("telephone").value;
+      let email = document.getElementById("email").value;
+      let org = document.getElementById("org").value;
+      let province = document.getElementById("province").value;
+     let city = document.getElementById("city").value;
+     let Barangay = document.getElementById("Barangay").value;
+      let Street = document.getElementById("Street").value;
+      let message = document.getElementById("message").value;
 
-                 <label for="org">Organization</label>
-                 <input type="text" id="org"  required>
-                           
-            </div>
-            
-            <div class="form-group">
+      if (
+        !fname || !lname || !telephone || !email || !org || 
+        !province || !city || !Barangay || !Street || !message
+      ) {
+        alert("All fields must be filled!");
+        return;
+      }
 
-                    <label for="province">Province</label>
-                    <select name="province" id="province">
-                         <option value="" disabled selected>Select your province</option>
-                    </select>
-      
-                </div>
+      if (fname===lname) {
+        alert("Firstname and Lastname must not be the same!");
+        return;
+      }
 
-             <div class="form-group">
+      if (isNaN(telephone)) {
+        alert("Telephone must be a number!");
+        return;
+      }
 
-                 <label for="city">City/Town</label>                   
-                 <select name="city" id="city">
-                     <option value="" disabled selected>Select your Municipality or city</option>
-                 </select>   
+      if (province === "davao del norte" && city === "tagum city" && Barangay === "mankilam") {
+        alert("You're from Tagum, Mankilam, Davao del Norte!");
+      }
 
-            </div>
+      if (message.length < 10) {
+        alert("Message must be more than 10 characters.");
+        return;
+      }
 
-            <div class="form-group">
-
-                  <label for="Barangay">Barangay</label>
-                  <select name="Barangay" id="Barangay">
-                     <option value="" disabled selected spellcheck=""">Select your Barangay</option>
-                  </select>
-                         
-            </div>
-
-           <div class="form-group">
-
-                 <label for="Street">Street</label>
-                 <input type="text" id="Street"  required>
-                           
-            </div>
-               
-             <div class="form-group">
-
-                <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="Write something....."></textarea>
-                   
-                  
-             </div>
-             <div></div>
-             <script>
-        
-                 let fname = document.getElementById('fname').value;
-       let lname = document.getElementById('lname').value;
-        let telephone = document.getElementById('telephone').value;
-                let email = document.getElementById('email').value;
-            let org = document.getElementById('org').value;
-               let province = document.getElementById('province').value;
-           let city = document.getElementById('city').value;
-          let Barangay = document.getElementById('Barangay').value;
-          let Street = document.getElementById('Street').value;
-           let message = document.getElementById('message').value;
-
-if(fname=="" || lname=="" || telephone=="" || email=="" || org=="" || province=="" || city=="" || Barangay=="" || Street=="" || message==""){
-    alert("Input is empty");
-}
-else{
-    
-    if (fname===Iname) {
-        alert("Firstname and Lastname are same!");
-
-    }
-    else if(isNaN(telephone)){
-    alert("telephone is not a number!");
-}
-
-else if(alert( province==="davao del norte" && city==="tagum city" && Barangay==="mankilam" )){
-    
-}
-
-else if(message.length<=10){
-    alert("message is lessthan 10");
-}
-
-else{
-
-}
-            }              
-</script>           
+      alert("Form submitted successfully!");
+   
+    });
+  </script>
              <div class="button-container">
                 <div class="btn">
                     <button>Submit</button>

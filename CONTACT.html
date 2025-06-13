@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+     <link rel="shoctcut icon" href="img/FMovies Logo.jpg">
     <title>CONTACT</title>
 </head>
 <body>
@@ -104,7 +105,46 @@
                    
                   
              </div>
+             <div></div>
+             <script>
+        
+                 let fname = document.getElementById('fname').value;
+       let lname = document.getElementById('lname').value;
+        let telephone = document.getElementById('telephone').value;
+                let email = document.getElementById('email').value;
+            let org = document.getElementById('org').value;
+               let province = document.getElementById('province').value;
+           let city = document.getElementById('city').value;
+          let Barangay = document.getElementById('Barangay').value;
+          let Street = document.getElementById('Street').value;
+           let message = document.getElementById('message').value;
 
+if(fname=="" || lname=="" || telephone=="" || email=="" || org=="" || province=="" || city=="" || Barangay=="" || Street=="" || message==""){
+    alert("Input is empty");
+}
+else{
+    
+    if (fname===Iname) {
+        alert("Firstname and Lastname are same!");
+
+    }
+    else if(isNaN(telephone)){
+    alert("telephone is not a number!");
+}
+
+else if(alert( province==="davao del norte" && city==="tagum city" && Barangay==="mankilam" )){
+    
+}
+
+else if(message.length<=10){
+    alert("message is lessthan 10");
+}
+
+else{
+
+}
+            }              
+</script>           
              <div class="button-container">
                 <div class="btn">
                     <button>Submit</button>
